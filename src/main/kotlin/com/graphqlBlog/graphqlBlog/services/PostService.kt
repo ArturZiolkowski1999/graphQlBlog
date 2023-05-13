@@ -10,4 +10,8 @@ class PostService(private val postRepository: PostRepository) {
     fun getAllPosts(): List<Post> {
         return postRepository.findAll()
     }
+
+    fun savePost(post: Post): Post {
+        return postRepository.save(post)
+    }
 }

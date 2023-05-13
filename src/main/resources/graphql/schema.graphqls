@@ -2,6 +2,13 @@ type Query {
     getPosts: [Post]
 }
 
+type Mutation {
+    createPost(
+        body: String,
+        author: String
+    ): Post!
+}
+
 type Post {
     id: ID!
     body: String
